@@ -1,0 +1,76 @@
+
+
+
+ 
+<div>
+</div>
+<div class="container">
+
+  <h3 class=" text-center">Commencer vos conversations ici!</h3>
+  <div class="messaging">
+    <div class="inbox_msg">
+      <div class="inbox_people">
+        <div class="headind_srch">
+          <div class="recent_heading">
+            <h4>amis</h4>
+          </div>
+          <div class="srch_bar">
+          </div>
+        </div>
+        <div class="inbox_chat">
+          <div class="chat_list active_chat" *ngFor="let item of users$">
+            <div class="chat_people">
+              <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <div class="chat_ib">
+                <h5>{{item.userName}}</h5>
+              
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="mesgs ">
+        <p class="newuser">{{newuser?.user}} {{newuser?.message}}</p>
+        <div class="msg_history ">
+          <div class="incoming_msg" *ngFor="let item of msg">
+            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+            </div>
+            <div class="received_msg">
+              <div class="received_withd_msg">
+                <p><strong>{{item.user}}</strong> : {{item.chat}}</p>
+                <span class="time_date"> {{ item.ladate | date:'medium' }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="type_msg">
+          <div class="input_msg_write">
+            <!-- <input type="text" class="write_msg" placeholder="Put Name" [(ngModel)]="user"> -->
+            <input type="text" class="write_msg" placeholder="Type a message" [(ngModel)]="msgtxt">
+
+          </div>
+          <button class="msg_send_btn" type="button" (click)="sendMessage(); join();"><i class="fa fa-paper-plane-o"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<!--<input type="text"[(ngModel)]= "user" >
+<input type="text"[(ngModel)]="msgtxt">
+<button type="button" class="btn btn-success pull-right" (click)="sendMessage()">Send</button>
+    <div *ngFor="let item of msg">
+
+    <span ><strong> {{item.user}} : </strong>{{item.chat}}</span>
+
+  </div>
+
+
+  {{ today  | date:'medium' }}-->
