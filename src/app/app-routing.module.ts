@@ -5,6 +5,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
+  {path : '', component: LoginComponent },
   {path : 'chat',component: ChatComponent},
   {path : 'login', component: LoginComponent },
   {path : 'register', component: InscriptionComponent },
